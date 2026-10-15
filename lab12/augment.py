@@ -45,9 +45,12 @@ def dagger_windows(planner, logs, idx, expert=None):
     """Let `planner` drive the training logs in closed loop, record the states it visits, and label each one with what
     the expert rule would do there (its 3 s speed forecast). Returns (X_perc, Y). Training on these teaches the
     planner to recover from its own small errors instead of only imitating states the human visited."""
-    # TODO (Bước 7): hãy tự cài hàm này. Gợi ý:
-    #   (1) rec = []; sim.rollout_logs(planner, logs, idx, record=rec). (2) Mỗi phần tử của rec là
-    #   (hist_rel, v, gap, lead_v) của các hàng còn đang lái: np.concatenate theo từng thành phần. (3) X =
-    #   features('perc', hist_rel, v, gap, lead_v). (4) Y = idm_forecast(expert, v, gap, lead_v): nhãn là
-    #   việc luật IDM sẽ làm Ở CHÍNH các trạng thái đó. Trả (X, Y).
-    raise NotImplementedError("TODO dagger_windows: xem GUIDE.md, Bước 7")
+    from . import sim                                            # imported here: only this function needs them
+    from .planners import idm_forecast
+    expert = expert or IDM()
+    rec = []
+    sim.rollout_logs(planner, logs, idx, record=rec)             # the planner drives: states IT visits, not the human's
+    hist_rel, v, gap, lead_v = (np.concatenate([r[j] for r in rec]) for j in range(4))
+    X = features("perc", hist_rel, v, gap, lead_v)
+    Y = idm_forecast(expert, v, gap, lead_v)                     # what the expert would do from exactly those states
+    return X, Y
