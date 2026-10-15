@@ -10,7 +10,7 @@
 | Seed chia dữ liệu / seed mô hình (xem `evidence/closedloop.json`, mục `student`) | split_seed 2737 / model_seed 8507 (5 seed huấn luyện: 8507–8511), cruise speed của lưới 12.0 m/s |
 | Số seed huấn luyện bạn dùng (`--seeds`) | 5 (mặc định) |
 
-Toàn bộ `evidence/` sinh từ **một lần chạy** `python run_all.py --student-id 2A202602900 --seeds 5` trên Kaggle (máy GPU T4, commit `4e575df`, 25/25 kiểm thử OK, 816 s; log ở `kaggle/logs/`). Mã của bài thuần numpy nên chạy trên CPU của máy đó, GPU không tham gia tính toán. Số liệu dưới đây lấy nguyên từ các file JSON (làm tròn).
+Toàn bộ `evidence/` sinh từ **một lần chạy** `python run_all.py --student-id 2A202602900 --seeds 5` trên Kaggle (máy GPU T4, commit `4e575df`; log ở `kaggle/logs/`). Mã của bài thuần numpy nên chạy trên CPU của máy đó, GPU không tham gia tính toán. Số liệu dưới đây lấy nguyên từ các file JSON (làm tròn).
 
 ## Kết quả cuối
 
@@ -37,9 +37,9 @@ Ngoài ra `Spatial_Gap = Pos_LV − Pos_FAV − 4.5 m` đúng tới sai số 3.6
 ## Câu 2 · Phát lại
 Bản refactor float32 khác bit ở bao nhiêu đoạn, vượt dung sai ở bao nhiêu? Thay đổi AEB làm lệch bao nhiêu đoạn, và vì sao lệch ở đúng những khung đó (mở một đoạn ra xem)? Phát theo thời gian thật làm lộ ra điều gì mà phát nhanh nhất che đi?
 
-- **Refactor float32 (đổi thứ tự phép tính):** **600/600** đoạn không giống từng bit, nhưng **0/600** đoạn vượt dung sai. Lệch lớn nhất là 4.0e-4 m/s², nhỏ hơn atol = 1e-3 (cộng thêm rtol·|a|). Chạy lại đúng mã cũ thì 0 đoạn khác bit. Nguyên nhân: phép cộng số thực không có tính kết hợp, (0.1+0.2)+0.3 = 0.6000000000000001 còn 0.1+(0.2+0.3) = 0.6; cộng 50k số float32 theo chiều xuôi và chiều ngược lệch nhau tương đối 6.9e-6. Dung sai 1e-3 m/s² là hợp lý: nó nhỏ hơn nhiều mức nhiễu của bộ chấp hành (trong 0.1 s chỉ đổi tốc độ 1e-4 m/s), nhưng vẫn đủ nhạy để bắt một thay đổi hành vi thật (AEB làm lệch tới 2.01 m/s²).
+- **Refactor float32 (đổi thứ tự phép tính):** **600/600** đoạn không giống từng bit, nhưng **0/600** đoạn vượt dung sai. Lệch lớn nhất là 4.0e-4 m/s², nhỏ hơn atol = 1e-3 (cộng thêm rtol·|a|). Chạy lại đúng mã cũ thì 0 đoạn khác bit. Nguyên nhân: phép cộng số thực không có tính kết hợp, (0.1+0.2)+0.3 = 0.6000000000000001 còn 0.1+(0.2+0.3) = 0.6; cộng 50k số float32 theo chiều xuôi và chiều ngược lệch nhau tương đối 6.9e-6. Dung sai 1e-3 m/s² là hợp lý: nó nhỏ hơn nhiều mức nhiễu của bộ chấp hành và cảm biến tốc độ, nhưng vẫn đủ nhạy để bắt một thay đổi hành vi thật (AEB làm lệch tới 2.01 m/s²).
 - **Thêm AEB:** chỉ **7/600** đoạn lệch (52, 58, 156, 214, 324, 592, 593). Mở đoạn 52 (`evidence/peek_aeb.txt`): chỉ 3/78 khung lệch, là các khung 75–77 ngay trước lúc chạm. Ở đó TTC = 1.48 / 1.46 / 1.44 s, dưới ngưỡng 1.5 s, nên lệnh đổi từ −4.38 thành −6.00 m/s². Khung có TTC thấp nhất trong số khung không đổi là 1.51 s. Đoạn 156 có một khung TTC 1.27 s nhưng **không đổi**, vì IDM đã ra lệnh −7.22, mạnh hơn −6 rồi (AEB lấy `min(cmd, −6)`). Vậy AEB chỉ đổi những khung có TTC < 1.5 s **và** IDM đang phanh nhẹ hơn 6 m/s², tức là vài khung cuối của số ít đoạn sắp chạm.
-- **Phát theo thời gian thật:** có **585 khung trễ + 581 khung rớt** trên 59,943 khung, làm **370/600** đoạn đổi lệnh (lệch tới 6.79 m/s²). Phát nhanh nhất thì có 0 khung trễ, 0 khung rớt, vì ở chế độ đó không có đồng hồ: thông điệp sau chỉ được gửi khi bộ điều khiển xử lý xong thông điệp trước, nên một khung tốn 140 ms (vượt hạn 100 ms) không hề lộ ra. Phát nhanh nhất chỉ kiểm tra được **logic**, không kiểm tra được **thời gian**.
+- **Phát theo thời gian thật:** có **585 khung trễ + 581 khung rớt** trên 59,943 khung, làm **370/600** đoạn đổi lệnh (lệch tới 6.79 m/s²). Phát nhanh nhất thì có 0 khung trễ, 0 khung rớt, vì ở chế độ đó không có đồng hồ: thông điệp sau chỉ được gửi khi bộ điều khiển xử lý xong thông điệp trước, nên một khung xử lý lâu hơn chu kỳ 0.1 s (quá hạn) không hề lộ ra. Phát nhanh nhất chỉ kiểm tra được **logic**, không kiểm tra được **thời gian**.
 
 ## Câu 3 · Kịch bản
 Lưới của bạn (tốc độ cruise, giới hạn khoảng cách, số ô): bao nhiêu % ô **không ai tránh được**? Độ trễ phản ứng 0 → 0,6 s làm vùng đâm của IDM tăng bao nhiêu? Log có phủ vùng khó không? (dẫn giới hạn phanh mạnh nhất của người lái trong log, và phần lưới đòi hỏi hơn thế)
@@ -61,7 +61,7 @@ Dán bảng L2 và tỷ lệ va chạm của bốn bộ điều khiển (kèm h�
 
 **4 cặp đổi thứ tự:** (const-vel, IDM), (const-vel, EgoMLP), (IDM, EgoMLP), (IDM, PercMLP). Xếp hạng theo L2 gần như ngược hẳn xếp hạng theo va chạm (`openloop_vs_closedloop.png`).
 - **IDM có L2 tệ nhất (1.502 m, còn tệ hơn đứng yên ở tốc độ cũ 1.265 m) mà lái an toàn nhất (0.1 %, 3/2883).** L2 đo khoảng cách tới **quỹ đạo của người lái**, không đo độ an toàn. IDM có tham số riêng (T = 1.2 s, v0 = 15 m/s), còn người trong log giữ khoảng cách thời gian trung vị 1.81 s và tăng/giảm tốc theo kiểu của họ, nên dự báo 3 s của IDM lệch đều đặn khỏi người. Nhưng IDM là luật **phản hồi** theo khoảng cách và tốc độ tiến gần: khoảng cách mong muốn s* tăng khi tiến gần nhanh, còn lực phanh tăng theo (s*/gap)². Nhờ vậy ở mỗi bước nó tự sửa sai số của chính mình. Bằng chứng: L2 của IDM gần như không đổi khi xe dẫn phanh (1.502 → 1.555), trung vị phanh mạnh nhất 0.91 m/s².
-- **EgoMLP có L2 tốt hơn constant-velocity (0.763 so với 1.265) vì** tốc độ của một xe tự tương quan rất mạnh, và **95.6 %** cửa sổ test không có xe dẫn phanh (lát cắt phanh chỉ chiếm 4.4 %). Ngoại suy quá khứ của chính mình vì thế khớp tốt **trung bình**. Nhưng nó **không có đầu vào gap hay tốc độ xe dẫn**, nên khi xe dẫn phanh nó không thể biết. L2 trên lát cắt phanh tăng lên 1.152; seed xấu nhất có trung vị phanh mạnh nhất chỉ 0.05 m/s² và đâm ở **61.2 %** quỹ đạo có xe dẫn phanh. Trong vòng kín, đầu vào của nó lại là chính các lệnh nó vừa ra, nên sai số tự khuếch đại: TB 20.8 %, còn tệ hơn const-vel 19.5 %.
+- **EgoMLP có L2 tốt hơn constant-velocity (0.763 so với 1.265) vì** tốc độ của một xe tự tương quan rất mạnh, và chỉ **4.4 %** cửa sổ test có xe dẫn phanh trong 3 s tới; phần còn lại thì không. Ngoại suy quá khứ của chính mình vì thế khớp tốt **trung bình**. Nhưng nó **không có đầu vào gap hay tốc độ xe dẫn**, nên khi xe dẫn phanh nó không thể biết. L2 trên lát cắt phanh tăng lên 1.152; seed xấu nhất có trung vị phanh mạnh nhất chỉ 0.05 m/s² và đâm ở **61.2 %** quỹ đạo có xe dẫn phanh. Trong vòng kín, đầu vào của nó lại là chính các lệnh nó vừa ra, nên sai số tự khuếch đại: TB 20.8 %, còn tệ hơn const-vel 19.5 %.
 
 ## Câu 5 · Một lần chạy chưa đủ
 EgoMLP dao động bao nhiêu giữa các seed? Khoảng tin cậy Wilson nói gì? Nếu bạn chỉ chạy đúng một seed thì có thể báo kết quả nào, và vì sao điều đó nguy hiểm?
@@ -100,8 +100,8 @@ Có hai nguyên nhân gốc:
 2. **Sai số tích luỹ khi tự lái (R2, R3).** L2 vòng hở của PercMLP tốt nhất (0.625) nhưng vòng kín vẫn đâm 0.4–1.3 %, so với IDM 0.1 %. Nó chỉ học ở các trạng thái **người** đã đi qua; một sai số nhỏ đẩy xe vào trạng thái gap nhỏ hơn, tiến gần nhanh hơn, ngoài phân bố huấn luyện, và ở đó dự báo của nó tệ.
 
 **Cách sửa:**
-1. Thêm 196,830 cửa sổ từ 20,000 ca cắt vào mô phỏng, nhãn lấy từ việc IDM làm ở đó. Cách này lấp đúng họ kịch bản còn thiếu: R4 từ 22.0 % xuống **0.3 %**, R6 từ 29.4 % xuống **7.7 %**.
-2. DAgger 2 vòng (khoảng 894,700 cửa sổ): cho mô hình tự lái, ghi lại trạng thái **nó tự đi vào**, gắn nhãn bằng dự báo 3 s của IDM. Mô hình học cách tự sửa sai số của mình. Kết quả trên log còn 0.10–0.17 % (cận trên 0.4 %), lát cắt phanh 1.0 % (cận trên 3.6 %).
+1. Thêm các cửa sổ huấn luyện từ 20,000 ca cắt vào mô phỏng, nhãn lấy từ việc IDM làm ở đó. Cách này lấp đúng họ kịch bản còn thiếu: R4 từ 22.0 % xuống **0.3 %**, R6 từ 29.4 % xuống **7.7 %**.
+2. DAgger 2 vòng: cho mô hình tự lái, ghi lại trạng thái **nó tự đi vào**, gắn nhãn bằng dự báo 3 s của IDM. Mô hình học cách tự sửa sai số của mình. Kết quả trên log còn 0.10–0.17 % (cận trên 0.4 %), lát cắt phanh 1.0 % (cận trên 3.6 %).
 
 L2 lại **xấu đi**, từ 0.625 lên 0.802, vì nhãn giờ là của IDM chứ không phải của người. Điểm vòng hở đánh lừa theo cả hai chiều.
 
@@ -133,22 +133,6 @@ Chọn **ít nhất ba** giới hạn quan trọng nhất đối với việc qu
 
 ---
 
-## Phụ lục · Bước 8 (bonus, không chấm): xem model của mình lái trong mô phỏng 3D
+## Phụ lục · Bước 8 (bonus, không chấm)
 
-`python scripts/export_viz.py` xuất 15 model (3 loại × 5 seed) và 24 log test giữ lại (12 log có xe dẫn phanh mạnh nhất, tìm bằng `mine_braking` của mình) sang `viz/`. Mình xem trong trình duyệt (`python viz/serve.py`), rồi quét **toàn bộ** các cảnh trên cả 5 seed bằng `node bonus/viz_sweep.js`. Script này dùng lại đúng `viz/sim.js` và cách chấm của `viz/app.js`; kết quả ở `bonus/viz_sweep.json`. Mô phỏng 3D có vật lý riêng (xe đạp động học, 20 Hz, μ = 0.8), nên chỉ so **hình dạng** với `evidence/`, không so số.
-
-| Quan sát (số seed đâm / 5) | IDM | const-vel | EgoMLP | PercMLP | PercMLP+ |
-|---|---|---|---|---|---|
-| Xe dẫn phanh 3 → 9 m/s² (đâm xe trước) | không | từ 4 m/s² | 1/5 → 4/5 | 0/5 | 0/5 |
-| Cắt vào, xe ta 14 m/s, gap 10 m, tiến gần 10 m/s | không | có | 5/5 | 5/5 | 1/5 |
-| Cắt vào, gap 20 m, tiến gần 13.5 m/s | không | có | 5/5 | 4/5 | 0/5 |
-| Xe dẫn phanh 6 m/s², xe sau **phát lại** (xe sau đâm ta) | có | không | 3/5 | 5/5 | 5/5 |
-| Như trên, xe sau **phản ứng** | không | không | 0/5 | 0/5 | 0/5 |
-| 24 log thật: số lượt (log × seed) đâm xe trước | 0/24 | 11/24 | 65/120 | 1/120 | 0/120 |
-
-Những gì mô phỏng 3D cho thấy, khớp với các câu ở trên:
-- **EgoMLP mù** ([ảnh](bonus/viz_1_brake_egomlp.jpg)). Seed 1 đâm xe dẫn ở 8.6 s với mức phanh mạnh nhất 0.0 m/s²: nó không hề thấy xe dẫn phanh (Câu 4).
-- **Va chạm giả** ([ảnh](bonus/viz_2_rear_replay_idm.jpg)). IDM giữ cách xe trước 6.5 m và phanh 7.8 m/s², nhưng xe sau phát lại vẫn đâm vào đuôi ở 10.3 s; const-vel không phanh nên "an toàn" phía sau (Câu 6).
-- **Cắt vào** ([PercMLP](bonus/viz_3_cutin_percmlp.jpg), [PercMLP+](bonus/viz_4_cutin_percmlp_plus.jpg)). PercMLP chỉ phanh tới 6.9 m/s² rồi đâm ở 2.1 s; PercMLP+ phanh tới 7.8 m/s² và dừng cách 2.4 m (Câu 7). IDM chỉ đâm ở các ô mà ngay cả phanh μg ≈ 7.85 m/s² cũng không kịp (ví dụ gap 6 m, tiến gần ≥ 10 m/s), tức đúng biên bất khả kháng như Câu 3.
-- **Chạy cả 24 log trong trang** ([ảnh](bonus/viz_5_all_logs.jpg)). Kết quả: IDM 0, const-vel 11, EgoMLP 11…17 log tuỳ seed, PercMLP 0…1, PercMLP+ 0. Cùng thứ tự với bảng vòng kín ở bước 4: EgoMLP và const-vel tệ nhất, PercMLP+ ngang IDM.
-- **PercMLP+ không tốt đều hơn PercMLP ở mọi ô.** Ở gap 6 m, tiến gần 6 m/s và ở gap 10 m, tiến gần 8 m/s, PercMLP+ đâm 1/5 seed trong khi PercMLP 0/5. Đây thêm một lý do để không nói mô hình học "tốt hơn" khi chưa đo trên biên.
+Mình đã xuất model của mình sang mô phỏng 3D (`scripts/export_viz.py`), xem trong trình duyệt và quét mọi cảnh trên cả các seed huấn luyện. Phân tích, bảng kết quả và ảnh chụp nằm ở [`bonus/README.md`](bonus/README.md). Số ở đó lấy từ `bonus/viz_sweep.json` (mô phỏng 3D có vật lý riêng), không thuộc `evidence/`, nên mình để tách khỏi 8 câu trả lời.
