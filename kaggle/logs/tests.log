@@ -1,0 +1,30 @@
+test_windows_have_training_layout_and_expert_labels (test_lab12.Dagger.test_windows_have_training_layout_and_expert_labels) ... ok
+test_arrays_and_dedupe (test_lab12.Data.test_arrays_and_dedupe) ... ok
+test_lead_accel_recovers_a_known_ramp (test_lab12.Data.test_lead_accel_recovers_a_known_ramp) ... ok
+test_split_is_by_trajectory_and_disjoint (test_lab12.Data.test_split_is_by_trajectory_and_disjoint) ... ok
+test_good_candidate_is_released (test_lab12.Gate.test_good_candidate_is_released) ... ok
+test_irreproducible_replay_blocks_everything (test_lab12.Gate.test_irreproducible_replay_blocks_everything) ... ok
+test_one_failed_rule_blocks (test_lab12.Gate.test_one_failed_rule_blocks) ... ok
+test_features_have_the_same_layout_for_training_and_driving (test_lab12.Learning.test_features_have_the_same_layout_for_training_and_driving) ... ok
+test_mlp_learns_a_linear_map (test_lab12.Learning.test_mlp_learns_a_linear_map) ... ok
+test_student_params_are_stable_and_differ (test_lab12.Learning.test_student_params_are_stable_and_differ) ... ok
+test_float_addition_is_not_associative (test_lab12.Metrics.test_float_addition_is_not_associative) ... ok
+test_slide_examples (test_lab12.Metrics.test_slide_examples) ... ok
+test_ttc_and_required_decel_work_on_arrays (test_lab12.Metrics.test_ttc_and_required_decel_work_on_arrays) ... ok
+test_unavoidable_frontier (test_lab12.Metrics.test_unavoidable_frontier) ... ok
+test_wilson (test_lab12.Metrics.test_wilson) ... ok
+test_wilson_edges (test_lab12.Metrics.test_wilson_edges) ... ok
+test_a_sustained_braking_lead_is_found_and_a_one_step_blip_is_not (test_lab12.Mining.test_a_sustained_braking_lead_is_found_and_a_one_step_blip_is_not) ... ok
+test_l2_is_zero_for_perfect_prediction_and_sliced_correctly (test_lab12.OpenLoop.test_l2_is_zero_for_perfect_prediction_and_sliced_correctly) ... ok
+test_messages_are_replayed_in_timestamp_order (test_lab12.Replay.test_messages_are_replayed_in_timestamp_order) ... ok
+test_realtime_replay_exposes_what_fastest_hides (test_lab12.Replay.test_realtime_replay_exposes_what_fastest_hides) ... ok
+test_same_code_twice_is_identical_refactor_needs_tolerance (test_lab12.Replay.test_same_code_twice_is_identical_refactor_needs_tolerance) ... ok
+test_const_vel_hits_a_slower_cutter_and_idm_does_not (test_lab12.Simulator.test_const_vel_hits_a_slower_cutter_and_idm_does_not) ... ok
+test_full_brake_collides_exactly_where_physics_says (test_lab12.Simulator.test_full_brake_collides_exactly_where_physics_says) ... ok
+test_reactive_rear_car_removes_fake_rear_collisions (test_lab12.Simulator.test_reactive_rear_car_removes_fake_rear_collisions) ... ok
+test_rollout_on_logs_human_replay_has_no_collision_for_a_follower_that_copies_the_human (test_lab12.Simulator.test_rollout_on_logs_human_replay_has_no_collision_for_a_follower_that_copies_the_human) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.724s
+
+OK

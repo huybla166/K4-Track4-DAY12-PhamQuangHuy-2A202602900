@@ -1,0 +1,17 @@
+{
+  "id": "wanghui1101/k4-track4-day12-lab12",
+  "title": "k4-track4-day12-lab12",
+  "code_file": "lab12_kaggle.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}
