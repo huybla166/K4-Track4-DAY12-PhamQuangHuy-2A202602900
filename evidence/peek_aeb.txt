@@ -1,0 +1,19 @@
+segments that differ beyond tolerance: [52, 58, 156, 214, 324, 592, 593]
+
+segment 52: 3 of 78 frames differ: [75, 76, 77]
+  frame 75: gap 4.9981 closing 3.39 TTC 1.48  old command -4.38 -> new -6.00
+  frame 76: gap 4.6866 closing 3.21 TTC 1.46  old command -4.36 -> new -6.00
+  frame 77: gap 4.3966 closing 3.06 TTC 1.44  old command -4.35 -> new -6.00
+  lowest TTC among the unchanged frames: 1.51 s (above the 1.5 s AEB threshold)
+
+segment 58: 7 of 80 frames differ: [73, 74, 75, 76, 77, 78, 79]
+  frame 73: gap 3.7574 closing 2.72 TTC 1.38  old command -5.58 -> new -6.00
+  frame 74: gap 3.5509 closing 2.51 TTC 1.42  old command -5.45 -> new -6.00
+  frame 75: gap 3.3518 closing 2.33 TTC 1.44  old command -5.25 -> new -6.00
+  frame 76: gap 3.1616 closing 2.25 TTC 1.40  old command -5.25 -> new -6.00
+  frame 77: gap 2.9796 closing 2.12 TTC 1.41  old command -5.24 -> new -6.00
+  lowest TTC among the unchanged frames: 1.52 s (above the 1.5 s AEB threshold)
+
+segment 156: 1 of 78 frames differ: [4]
+  frame 4: gap 4.3682 closing 2.93 TTC 1.49  old command -5.62 -> new -6.00
+  lowest TTC among the unchanged frames: 1.27 s (old command there -7.22: already at or below -6)
