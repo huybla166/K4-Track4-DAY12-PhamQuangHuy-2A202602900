@@ -1,0 +1,1697 @@
+{
+ "student": "2A202602900",
+ "seeds": [
+  8507,
+  8508,
+  8509,
+  8510,
+  8511
+ ],
+ "scenes": {
+  "brake_decel_sweep": {
+   "3": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 1,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "4": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 2,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "5": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 3,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "6": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 3,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "7": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 4,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "8": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 4,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "9": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 4,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   }
+  },
+  "cutin_sweep_v14": {
+   "gap 6 m, dv 2": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 4,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 6 m, dv 4": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 6 m, dv 6": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 1,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 6 m, dv 8": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 1,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 6 m, dv 10": {
+    "IDM": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 6 m, dv 12": {
+    "IDM": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 6 m, dv 13.5": {
+    "IDM": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 10 m, dv 2": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 3,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 10 m, dv 4": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 10 m, dv 6": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 10 m, dv 8": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 1,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 10 m, dv 10": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 1,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 10 m, dv 12": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 4,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 10 m, dv 13.5": {
+    "IDM": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 20 m, dv 2": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 2,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 20 m, dv 4": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 4,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 20 m, dv 6": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 20 m, dv 8": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 20 m, dv 10": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 20 m, dv 12": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 1,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "gap 20 m, dv 13.5": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 4,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   }
+  },
+  "rear_replay_vs_reactive": {
+   "brake 6 m/s², rear replay": {
+    "IDM": {
+     "front": 0,
+     "rear": 1,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 3,
+     "rear": 3,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 5,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 5,
+     "n": 5
+    }
+   },
+   "brake 6 m/s², rear reactive": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 3,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    }
+   },
+   "cut-in 10 m / 8 m/s, rear replay": {
+    "IDM": {
+     "front": 0,
+     "rear": 1,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 2,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 5,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 1,
+     "rear": 4,
+     "n": 5
+    }
+   },
+   "cut-in 10 m / 8 m/s, rear reactive": {
+    "IDM": {
+     "front": 0,
+     "rear": 0,
+     "n": 1
+    },
+    "const-vel": {
+     "front": 1,
+     "rear": 0,
+     "n": 1
+    },
+    "EgoMLP": {
+     "front": 5,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP": {
+     "front": 0,
+     "rear": 0,
+     "n": 5
+    },
+    "PercMLP+": {
+     "front": 1,
+     "rear": 0,
+     "n": 5
+    }
+   }
+  },
+  "real_logs": {
+   "per_log": [
+    {
+     "id": 8729,
+     "brake": true,
+     "peak_decel": -4.24,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 4,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 5240,
+     "brake": true,
+     "peak_decel": -4,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 2,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 5265,
+     "brake": true,
+     "peak_decel": -3.88,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 1,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 1,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 5,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 5,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 5,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 7358,
+     "brake": true,
+     "peak_decel": -3.84,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 1,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 4291,
+     "brake": true,
+     "peak_decel": -3.79,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 6010,
+     "brake": true,
+     "peak_decel": -3.76,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 4,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 3998,
+     "brake": true,
+     "peak_decel": -3.75,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 4039,
+     "brake": true,
+     "peak_decel": -3.73,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 7365,
+     "brake": true,
+     "peak_decel": -3.59,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 8638,
+     "brake": true,
+     "peak_decel": -3.47,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 6655,
+     "brake": true,
+     "peak_decel": -3.45,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 2,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 5651,
+     "brake": true,
+     "peak_decel": -3.37,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 4808,
+     "brake": false,
+     "peak_decel": -0.63,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 1,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 1,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 5,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 5,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 5,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 3017,
+     "brake": false,
+     "peak_decel": -0.51,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 1,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 9186,
+     "brake": false,
+     "peak_decel": -0.4,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 4725,
+     "brake": false,
+     "peak_decel": -0.34,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 555,
+     "brake": false,
+     "peak_decel": -1.67,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 1,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 1,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 5,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 5,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 5,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 8394,
+     "brake": false,
+     "peak_decel": -1.29,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 7148,
+     "brake": false,
+     "peak_decel": -0.47,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 1,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 1380,
+     "brake": false,
+     "peak_decel": -1.29,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 1,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 1,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 5,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 5,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 5,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 749,
+     "brake": false,
+     "peak_decel": -2.15,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 1,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 5,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 1,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 6109,
+     "brake": false,
+     "peak_decel": -0.15,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 444,
+     "brake": false,
+     "peak_decel": -0.26,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    },
+    {
+     "id": 8314,
+     "brake": false,
+     "peak_decel": -0.93,
+     "res": {
+      "IDM": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "const-vel": {
+       "front": 0,
+       "rear": 0,
+       "n": 1
+      },
+      "EgoMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      },
+      "PercMLP+": {
+       "front": 0,
+       "rear": 0,
+       "n": 5
+      }
+     }
+    }
+   ],
+   "summary": {
+    "IDM": {
+     "seed_runs": 1,
+     "logs": 24,
+     "braking_logs": 12,
+     "front_hits_total_over_seeds": 0,
+     "front_hits_on_braking_logs_over_seeds": 0,
+     "logs_hit_by_any_seed": 0
+    },
+    "const-vel": {
+     "seed_runs": 1,
+     "logs": 24,
+     "braking_logs": 12,
+     "front_hits_total_over_seeds": 11,
+     "front_hits_on_braking_logs_over_seeds": 8,
+     "logs_hit_by_any_seed": 11
+    },
+    "EgoMLP": {
+     "seed_runs": 5,
+     "logs": 24,
+     "braking_logs": 12,
+     "front_hits_total_over_seeds": 65,
+     "front_hits_on_braking_logs_over_seeds": 38,
+     "logs_hit_by_any_seed": 17
+    },
+    "PercMLP": {
+     "seed_runs": 5,
+     "logs": 24,
+     "braking_logs": 12,
+     "front_hits_total_over_seeds": 1,
+     "front_hits_on_braking_logs_over_seeds": 0,
+     "logs_hit_by_any_seed": 1
+    },
+    "PercMLP+": {
+     "seed_runs": 5,
+     "logs": 24,
+     "braking_logs": 12,
+     "front_hits_total_over_seeds": 0,
+     "front_hits_on_braking_logs_over_seeds": 0,
+     "logs_hit_by_any_seed": 0
+    }
+   }
+  }
+ },
+ "seconds": 30
+}
